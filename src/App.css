@@ -63,3 +63,12 @@
 .fadeIn-right{
   left: 80%;
 }
+
+ul{ 
+  list-style-type: none;
+}
+
+.modal-header {
+  background-color: black;
+  color: white;
+}

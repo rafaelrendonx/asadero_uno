@@ -5,20 +5,19 @@ function NavBarCustom() {
 
       <img src={require("../images/logo2bw.png")} alt="Logo" width="350" height="350" />
 
-
-      <ul className="nav justify-content-center">
-        <li className="navbar-text">
-          <a className="nav-link col-lg-10 fs-4 px-6" href="#Menu">Menú</a>
-        </li>
-        <li className="navbar-text">
-          <a className="nav-link col-lg-10 fs-4 px-6" href="#Reservaciones">Reservaciones</a>
-        </li>
-        <li className="navbar-text">
-          <a className="nav-link col-lg-10 fs-4 px-6" href="#Contacto">Contacto</a>
-        </li>
-      </ul>
-
-    
+      <div className="container py-3">
+        <ul className="navbar navbar-dark bg-dark justify-content-center col-lg-12 col-md-12 col-sm-12">
+          <li className="navbar-text">
+            <a className="navbar-brand col-lg-10 fs-4 px-6" href="#Menu">Menú</a>
+          </li>
+          <li className="navbar-text">
+            <a className="navbar-brand col-lg-10 fs-4 px-6" href="#Reservaciones">Reservaciones</a>
+          </li>
+          <li className="navbar-text">
+            <a className="navbar-brand col-lg-10 fs-4 px-6" href="#Contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
 
     </div>
 
