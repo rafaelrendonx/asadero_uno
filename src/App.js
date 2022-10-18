@@ -9,11 +9,13 @@ import Contacto from './components/Contacto';
 function App() {
   return (
     <>
+    
     <NavBarCustom/>
     <Blog/>
     <Menu/>
     <Reservaciones/>
     <Contacto/>
+  
     </>
   )
 }

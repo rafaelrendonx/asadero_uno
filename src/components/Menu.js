@@ -14,7 +14,7 @@ const Menu = () => {
             descripcion: 'Taco con queso y carne a elección.',
         },
         {
-            taco : 'Taco Campechano',
+            plato : 'Taco Campechano',
             descripcion: 'Taco de asada y tripitas.',
         },
         {
@@ -269,185 +269,185 @@ const Menu = () => {
             </div>
 
 
-            <div class="modal fade" id="modalTacos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content panel-warning">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tacos</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalTacos" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content panel-warning">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Tacos</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {tacos.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="modalBurros" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Burros</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalBurros" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Burros</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {burros.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="modal fade" id="modalQuesadillas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Quesadillas</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalQuesadillas" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Quesadillas</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {quesadillas.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="modal fade" id="modalCortes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cortes</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalCortes" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Cortes</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {cortes.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="modalEntradas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Entradas</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalEntradas" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Entradas</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {entradas.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="modalBebidas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Bebidas</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalBebidas" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Bebidas</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {bebidas.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="modalCervezas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cervezas</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalCervezas" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Cervezas</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {cervezas.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="modalCocteles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Cocteles</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="modalCocteles" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-lg">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">Cocteles</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             {cocteles.map(plato => (
                                 <>
-                                <h4>{plato.plato}</h4>
-                                <p>{plato.descripcion}</p>
+                                <h4 key= {plato.id}>{plato.plato}</h4>
+                                <p key= {plato.id}>{plato.descripcion}</p>
                                 </>
                             ))}
                             <p></p>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                         </div>
                     </div>
                 </div>

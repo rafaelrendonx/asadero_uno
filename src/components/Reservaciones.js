@@ -1,26 +1,69 @@
+import { useState } from 'react'
+import { collection, onSnapshot, addDoc } from 'firebase/firestore'
+import { db } from '../firebase/index'
+
 const Reservaciones = () => {
+
+    const [reservacion, setReservacion] = useState({
+        nombre: "",
+        email: "",
+        telefono: "",
+        fecha: "",
+        area: "",
+        personas: "",
+    })
+
+    const handleInputValor = (event) => {
+        setReservacion({
+            ...reservacion,
+            [event.target.name]: event.target.value,
+        })
+    }
+
+    //Firebase
+    const REF_COLLECTION = collection(db, 'reservaciones')
+
+    //Traer datos de Firebase
+    const obtenerReservacion = async () => {
+        onSnapshot(REF_COLLECTION, (snapshot) => {
+            snapshot.docs.forEach((reservacion) => console.log(reservacion.data()))
+        })
+    }
+
+    obtenerReservacion()
+
+    //Llevar datos a Firebase
+    const agregarReservacion = async (reservacion) => {
+       const resp = await addDoc(REF_COLLECTION, reservacion);
+       console.log(resp)
+    }
+
+    const enviarReservacion = (event) => {
+        event.preventDefault()
+        agregarReservacion(reservacion)
+    }
 
     return (
         <div className="container-fluid py-5">
 
             <h2 className="display-4 fw-bold lh-1 py-3 text-center" id="Reservaciones">Reservaciones</h2>
             <div className="container px-4 py-3">
-                <form>
+                <form onSubmit={enviarReservacion}>
                     <div className="row py-3 gx-4">
 
                         <div className="col-md-5 py-1">
                             <label htmlFor="inputNombre" className="form-label">Nombre</label>
-                            <input type="text" className="form-control" id="inputNombre" />
+                            <input type="text" className="form-control" id="inputNombre" name="nombre" onChange={handleInputValor} />
                         </div>
 
                         <div className="col-md-4 py-1">
                             <label htmlFor="inputEmail" className="form-label">E-mail</label>
-                            <input type="email" className="form-control" id="inputEmail" />
+                            <input type="email" className="form-control" id="inputEmail" name="email" onChange={handleInputValor} />
                         </div>
 
                         <div className="col-md-3 py-1">
-                            <label htmlFor="inputCel" className="form-label">Teléfono</label>
-                            <input type="tel" className="form-control" id="inputCel" />
+                            <label htmlFor="inputTelefono" className="form-label">Teléfono</label>
+                            <input type="tel" className="form-control" id="inputTelefono" name="telefono" onChange={handleInputValor} />
                         </div>
                     </div>
 
@@ -28,13 +71,13 @@ const Reservaciones = () => {
 
                         <div className="col-md-5 py-1">
                             <label htmlFor="inputFecha" className="form-label">Fecha</label>
-                            <input type="datetime-local" className="form-control" id="inputFecha" />
+                            <input type="datetime-local" className="form-control" id="inputFecha" name="fecha" onChange={handleInputValor} />
                         </div>
 
                         <div className="col-md-4 py-1">
-                            <label htmlFor="inputZona" className="form-label">Zona</label>
-                            <select className="form-select" id="inputZona">
-                                <option defaultValue>Favor de elegir zona...</option>
+                            <label htmlFor="inputArea" className="form-label">Área</label>
+                            <select className="form-select" id="inputArea" name="area" onChange={handleInputValor}>
+                                <option defaultValue>Favor de elegir área...</option>
                                 <option>Terraza</option>
                                 <option>Jardin</option>
                                 <option>Interior</option>
@@ -43,7 +86,7 @@ const Reservaciones = () => {
 
                         <div className="col-md-3 py-1">
                             <label htmlFor="inputPersonas" className="form-label">Personas</label>
-                            <input type="number" className="form-control" id="inputPersonas" />
+                            <input type="number" className="form-control" id="inputPersonas" name="personas" onChange={handleInputValor} />
                         </div>
                     </div>
 
