@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import { collection, onSnapshot, addDoc } from 'firebase/firestore'
-import { db } from '../firebase/index'
+import { agregarReservacion, obtenerReservacion } from '../firebase/logic'
 
 const Reservaciones = () => {
 
@@ -13,6 +12,15 @@ const Reservaciones = () => {
         personas: "",
     })
 
+    const [first, setFirst] = useState(false);
+
+    const handleClick = () => {
+        setFirst(!first);
+        setTimeout(() => {
+            setFirst(!!first);
+        }, 2000);
+    };
+
     const handleInputValor = (event) => {
         setReservacion({
             ...reservacion,
@@ -20,27 +28,11 @@ const Reservaciones = () => {
         })
     }
 
-    //Firebase
-    const REF_COLLECTION = collection(db, 'reservaciones')
-
-    //Traer datos de Firebase
-    const obtenerReservacion = async () => {
-        onSnapshot(REF_COLLECTION, (snapshot) => {
-            snapshot.docs.forEach((reservacion) => console.log(reservacion.data()))
-        })
-    }
-
-    obtenerReservacion()
-
-    //Llevar datos a Firebase
-    const agregarReservacion = async (reservacion) => {
-       const resp = await addDoc(REF_COLLECTION, reservacion);
-       console.log(resp)
-    }
 
     const enviarReservacion = (event) => {
         event.preventDefault()
         agregarReservacion(reservacion)
+        obtenerReservacion()
     }
 
     return (
@@ -79,7 +71,7 @@ const Reservaciones = () => {
                             <select className="form-select" id="inputArea" name="area" onChange={handleInputValor}>
                                 <option defaultValue>Favor de elegir área...</option>
                                 <option>Terraza</option>
-                                <option>Jardin</option>
+                                <option>Jardín</option>
                                 <option>Interior</option>
                             </select>
                         </div>
@@ -91,7 +83,9 @@ const Reservaciones = () => {
                     </div>
 
                     <div className="col-12 py-3">
-                        <button type="submit" className="btn btn-dark">¡Reservar!</button>
+                        <button type="submit" className='btn btn-dark' onClick={handleClick}>¡Reservar!</button>
+                        <br/>
+                        <div className={`mt-3 alert alert-dark ${first ? '' : 'd-none'}`}>¡Su reservación ha sido guardada!</div>
                     </div>
 
                 </form>
