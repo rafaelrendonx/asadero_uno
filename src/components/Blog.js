@@ -1,4 +1,4 @@
-const Blog = () => {
+export const Blog = () => {
     return (
 
         <div className="container py-3 px-1 text-center">
@@ -12,4 +12,3 @@ const Blog = () => {
     )
 }
 
-export default Blog;

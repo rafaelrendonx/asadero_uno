@@ -1,0 +1,5 @@
+export * from './Navbar'
+export * from './Blog'
+export * from './Menu'
+export * from './Reservaciones'
+export * from './Contacto'

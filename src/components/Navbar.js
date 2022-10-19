@@ -1,7 +1,7 @@
-function NavBarCustom() {
+export function NavBar() {
   return (
 
-    <div className="px-4 text-center">
+    <header className="px-4 text-center">
 
       <img src={require("../images/logo2bw.png")} alt="Logo" width="350" height="350" />
 
@@ -19,9 +19,7 @@ function NavBarCustom() {
         </ul>
       </div>
 
-    </div>
+    </header>
 
   );
 }
-
-export default NavBarCustom;

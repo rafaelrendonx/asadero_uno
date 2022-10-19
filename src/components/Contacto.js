@@ -1,4 +1,4 @@
-const Contacto = () => {
+export const Contacto = () => {
 
     return (
 
@@ -7,7 +7,7 @@ const Contacto = () => {
             <h2 className="display-4 fw-bold lh-1 py-3 text-center" id="Contacto">Contacto</h2>
 
             <div className="container px-4 py-3">
-            
+
                 <h2 className="pb-2 border-bottom">Ubicación</h2>
                 <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-2 g-4 py-5">
 
@@ -18,8 +18,8 @@ const Contacto = () => {
                         <div>
                             <h3 className="fw-bold mb-0 fs-4">Direccion</h3>
                             <p>Blvd. Morelos no. 647 | Col. Colinas del Bachoco, C.P. 83104
-                            <br/>Hermosillo, Sonora</p>
-                            
+                                <br />Hermosillo, Sonora</p>
+
 
                         </div>
                     </div>
@@ -87,17 +87,12 @@ const Contacto = () => {
                         </div>
                     </div>
 
-
-
                 </div>
-
 
             </div>
 
         </footer>
 
-
     )
 }
 
-export default Contacto;

@@ -1,39 +1,43 @@
-
-import '../App.css'
-
-
-const Menu = () => {
+export const Menu = () => {
 
     const tacos = [
         {
+            id: 1,
             plato : 'Taco de Asada',
             descripcion: 'Taco de carne asada de diezmillo.',
         },
         {
+            id: 2,
             plato : 'Taco Caramelo',
             descripcion: 'Taco con queso y carne a elección.',
         },
         {
+            id: 3,
             plato : 'Taco Campechano',
             descripcion: 'Taco de asada y tripitas.',
         },
         {
+            id: 4,
             plato : 'Taco Pastor',
             descripcion: 'Taco de carne al pastor.',
         },
         {
+            id: 5,
             plato : 'Taco Gringa',
             descripcion: 'Taco de carne al pastor con queso.',
         },
         {
+            id: 6,
             plato : 'Taco Light',
             descripcion: 'Taco en hoja de lechuga con carne a elección.',
         },
         {
+            id: 7,
             plato : 'Taco Cabrería',
             descripcion: 'Taco de cabrería.',
         },
         {
+            id: 8,
             plato : 'Taco Tripitas',
             descripcion: 'Taco de tripitas.',
         },
@@ -41,22 +45,27 @@ const Menu = () => {
 
     const burros = [
         {
+            id: 1,
             plato : 'Burro Original',
             descripcion: 'Carne de res, guacamole, tomate y queso.',
         },
         {
+            id: 2,
             plato : 'Burro Mexicano',
             descripcion: 'Original, cebolla asada y chile verde..',
         },
         {
+            id: 3,
             plato : 'Burro Cheese',
             descripcion: 'Original, combinación de quesos.',
         },
         {
+            id: 4,
             plato : 'Burro Adobado',
             descripcion: 'Adobada, tomate, guacamole y queso.',
         },
         {
+            id: 5,
             plato : 'Burro Italiano',
             descripcion: 'Original, champiñones, jamón, pepperoni y salsa italiana.',
         },
@@ -64,14 +73,17 @@ const Menu = () => {
 
     const quesadillas = [
         {
+            id: 1,
             plato : 'Quesadilla con Carne',
             descripcion: 'Hecha con tortilla gordita. Con guacamole.',
         },
         {
+            id: 2,
             plato : 'Vegetariana',
             descripcion: 'Guacamole, tomate, queso, champiñones, chile verde, cebolla asada, queso y salsa italiana.',
         },
         {
+            id: 3,
             plato : 'Especial',
             descripcion: 'Res, guacamole, tomate, queso, cebolla asada, chile verde, champiñones, salsa italiana, extra queso, jamón y pepperoni. Cuadrada con tortilla sobaguera, hecha con tortilla gordita.',
         },
@@ -79,22 +91,27 @@ const Menu = () => {
 
     const cortes = [
         {
+            id: 1,
             plato : 'Costilla Cargada',
             descripcion: 'Pieza completa de costilla, horneada por largo tiempo y servida en su propio jugo, acompañada de papas sazonadas.',
         },
         {
+            id: 2,
             plato : 'Ribeye Steak',
             descripcion: 'Corte asado al punto sobre plancha caliente acompañado de papas cambray.',
         },
         {
+            id: 3,
             plato : 'Arrachera',
             descripcion: 'Asada al punto con papas sazonadas, cebolla y chiles toreados. Acompañada de salsa especial de la casa.',
         },
         {
+            id: 4,
             plato : 'Lomo de cabrería',
             descripcion: 'Pieza de filete con hueso asado al gusto, acompañado con papas cambray y salsa especial de la casa.',
         },
         {
+            id: 5,
             plato : 'Tomahawk',
             descripcion: 'Único corte de Rib Eye con hueso, asado al término deseado y servido sobre tabla de mezquite.',
         },
@@ -102,22 +119,26 @@ const Menu = () => {
 
     const entradas = [
         {
+            id: 1,
             plato : 'Papada de Puerco',
             descripcion: 'Deliciosa papada asada.',
         },
         {
-            plato : 'Chicharrones de Rib',
+            id: 2,           plato : 'Chicharrones de Rib',
             descripcion: 'Deliciosos trozos de carne adobados en salsas negras acompañados de cebolla y chile serrano.',
         },
         {
+            id: 3,
             plato : 'Pork Belly',
             descripcion: 'Porción de faldón de puerco horneado a fuego lento en salsa de manzana, servido en trozos.',
         },
         {
+            id: 4,
             plato : 'Queso Fundido',
             descripcion: 'Con un ingrediente a escoger chile verde, chorizo, chipotle y ostión.',
         },
         {
+            id: 5,
             plato : 'Panela en Ajonjolí',
             descripcion: 'Panela empanizada con semillas de ajonjolí, servida y bañada con salsa dulce, acompañada de rodajas de chile caribe.',
         },
@@ -125,22 +146,27 @@ const Menu = () => {
     
     const bebidas = [
         {
+            id: 1,
             plato : 'Horchata',
             descripcion: 'Agua de horchata de la casa.',
         },
         {
+            id: 2,
             plato : 'Jamaica',
             descripcion: 'Agua de jamaica de la casa.',
         },
         {
+            id: 3,
             plato : 'Cebada',
             descripcion: 'Agua de cebada de la casa.',
         },
         {
+            id: 4,
             plato : 'Tepache',
             descripcion: 'Rico fermenado de piña.',
         },
         {
+            id: 5,
             plato : 'Refrescos',
             descripcion: 'Bebidas carbonatadas de distintos sabores.',
         },
@@ -148,22 +174,27 @@ const Menu = () => {
 
     const cervezas = [
         {
+            id: 1,
             plato : 'Tecate',
             descripcion: 'Cerveza tipo Pilsen. Es de un color dorado y un contenido alcohólico de 4.7°.',
         },
         {
+            id: 2,
             plato : 'Indio',
             descripcion: 'Cerveza obscura estilo Lager Vienna creada de la fusión de dos ingredientes, la malta dorada y caramelo tostado. Contenido alcohólico de 4.1°.',
         },
         {
+            id: 3,
             plato : 'Amstel Ultra',
             descripcion: 'Cerveza tipo lager. Contenido alcohólico de 4°.',
         },
         {
+            id: 4,
             plato : 'Modelo Especial',
             descripcion: 'Cerveza pilsner americana. Contenido alcohólico de 4.5°.',
         },
         {
+            id: 5,
             plato : 'Negra Modelo',
             descripcion: 'Cerveza tipo Múnich fermentada dos veces más que otras cervezas. Contenido alcohólico de 5.3°.',
         },
@@ -171,22 +202,27 @@ const Menu = () => {
 
     const cocteles = [
         {
+            id: 1,
             plato : 'Old Fashioned',
             descripcion: 'Bulleit Bourbon, angostura bitters & azúcar.',
         },
         {
+            id: 2,
             plato : 'Negroni',
             descripcion: 'Ginebra, Campari & Vermouth Rosso.',
         },
         {
+            id: 3,
             plato : 'Moscow Mule',
             descripcion: 'Vodka Ketel One, hierbabuena, limón & ginger.',
         },
         {
+            id: 4,
             plato : 'Dry Martini',
             descripcion: 'Tanqueray, cinzano dry, perfume y twist de limón amarillo.',
         },
         {
+            id: 5,
             plato : 'Whisky Sour',
             descripcion: 'Bulleit Bourbon, angostura, aquafaba, bitters sweet & sour.',
         },
@@ -278,10 +314,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {tacos.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -301,10 +337,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {burros.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -324,10 +360,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {quesadillas.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -347,10 +383,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {cortes.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -370,10 +406,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {entradas.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -393,10 +429,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {bebidas.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -416,10 +452,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {cervezas.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -439,10 +475,10 @@ const Menu = () => {
                         </div>
                         <div className="modal-body">
                             {cocteles.map(plato => (
-                                <>
-                                <h4 key= {plato.id}>{plato.plato}</h4>
-                                <p key= {plato.id}>{plato.descripcion}</p>
-                                </>
+                                <div key= {plato.id}>
+                                <h4>{plato.plato}</h4>
+                                <p>{plato.descripcion}</p>
+                                </div>
                             ))}
                             <p></p>
                         </div>
@@ -452,12 +488,7 @@ const Menu = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
+            
         </div>
     )
 }
-
-export default Menu
