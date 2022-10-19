@@ -120,7 +120,7 @@ export const Reservaciones = () => {
 
             <div className="container-fluid py-5" >
             <h2 className="display-4 fw-bold lh-1 py-3 text-center" id="Reservaciones">Reservaciones Existentes</h2>
-                <div className="container px-4 py-3">
+                <div className="container px-4 py-3 table-responsive-sm">
                     <Tabla infoTabla={infoTabla} />
                 </div>
             </div>
